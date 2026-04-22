@@ -1,10 +1,12 @@
 {
     "title": "Reddit Community Monitor",
+    "description": "Monitora subreddit selezionati e restituisce post utili per la pipeline news community.",
     "type": "object",
     "schemaVersion": 1,
     "properties": {
         "subreddits": {
             "title": "Subreddits",
+            "description": "Lista dei subreddit da monitorare.",
             "type": "array",
             "editor": "stringList",
             "default": [
@@ -17,7 +19,9 @@
         },
         "sort": {
             "title": "Sort",
+            "description": "Ordine dei post da leggere nel subreddit.",
             "type": "string",
+            "editor": "select",
             "enum": [
                 "new",
                 "top"
@@ -26,16 +30,20 @@
         },
         "maxPostsPerSubreddit": {
             "title": "Max posts per subreddit",
+            "description": "Numero massimo di post da raccogliere per ogni subreddit.",
             "type": "integer",
+            "editor": "number",
             "default": 10
         },
         "useApifyProxy": {
             "title": "Use Apify proxy",
+            "description": "Se attivo, usa il proxy Apify durante il crawling.",
             "type": "boolean",
             "default": true
         },
         "apifyProxyGroups": {
             "title": "Apify proxy groups",
+            "description": "Gruppi proxy Apify da usare, per esempio RESIDENTIAL.",
             "type": "array",
             "editor": "stringList",
             "default": [
