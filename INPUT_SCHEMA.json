@@ -1,0 +1,49 @@
+{
+    "title": "Reddit Community Monitor",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "subreddits": {
+            "title": "Subreddits",
+            "type": "array",
+            "editor": "stringList",
+            "default": [
+                "ClaudeAI",
+                "ClaudeCode",
+                "claudeaiprojects",
+                "ArtificialInteligence",
+                "vibecoding"
+            ]
+        },
+        "sort": {
+            "title": "Sort",
+            "type": "string",
+            "enum": [
+                "new",
+                "top"
+            ],
+            "default": "new"
+        },
+        "maxPostsPerSubreddit": {
+            "title": "Max posts per subreddit",
+            "type": "integer",
+            "default": 10
+        },
+        "useApifyProxy": {
+            "title": "Use Apify proxy",
+            "type": "boolean",
+            "default": true
+        },
+        "apifyProxyGroups": {
+            "title": "Apify proxy groups",
+            "type": "array",
+            "editor": "stringList",
+            "default": [
+                "RESIDENTIAL"
+            ]
+        }
+    },
+    "required": [
+        "subreddits"
+    ]
+}
