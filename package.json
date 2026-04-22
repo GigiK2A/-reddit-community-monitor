@@ -3,9 +3,8 @@
     "version": "0.0.1",
     "type": "module",
     "dependencies": {
-        "apify": "^3.4.0",
-        "crawlee": "^3.10.5",
-        "playwright": "^1.52.0"
+        "apify": "^3.7.0",
+        "crawlee": "^3.16.0"
     },
     "scripts": {
         "start": "node main.js"

@@ -1,7 +1,8 @@
 FROM apify/actor-node-playwright-chrome:20
 
-COPY package*.json ./
+WORKDIR /usr/src/app
 
-RUN npm install --omit=dev
+COPY package*.json ./
+RUN npm ci --omit=dev || npm install --omit=dev
 
 COPY . ./
